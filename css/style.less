@@ -1,76 +1,133 @@
 @import 'lib';
 
+@g-yellow: #e2b735;
+@g-red: #c85b5c;
+@g-blue: #25a5d0;
+@g-purple: #a64ba5;
+@g-green: #8bbe48;
+@g-pink: #e47fb8;
+
+@-webkit-keyframes rainbow-a {
+    0% { color: @g-red; }
+    20% { color: @g-yellow; }
+    40% { color: @g-green; }
+    55% { color: @g-blue; }
+    70% { color: @g-purple; }
+    85% { color: @g-pink; }
+}
+@-moz-keyframes rainbow-a {
+    0% { color: @g-red; }
+    20% { color: @g-yellow; }
+    40% { color: @g-green; }
+    55% { color: @g-blue; }
+    70% { color: @g-purple; }
+    85% { color: @g-pink; }
+}
+
+@-webkit-keyframes rainbow-bg {
+    0% { background-color: @g-red; }
+    20% { background-color: @g-yellow; }
+    40% { background-color: @g-green; }
+    55% { background-color: @g-blue; }
+    70% { background-color: @g-purple; }
+    85% { background-color: @g-pink; }
+}
+@-moz-keyframes rainbow-bg {
+    0% { background-color: @g-red; }
+    20% { background-color: @g-yellow; }
+    40% { background-color: @g-green; }
+    55% { background-color: @g-blue; }
+    70% { background-color: @g-purple; }
+    85% { background-color: @g-pink; }
+}
+
 html, body {
     height: 100%;
+}
+
+.animate-a() {
+    color: @g-red;
+    .animation(rainbow-a 100s ease 0s infinite);
+}
+.animate-bg() {
+    background-color: @g-red;
+    .animation(rainbow-bg 100s ease 0s infinite);
 }
 
 body {
     display: table;
     height: 100%;
     width: 100%;
-    .gradient-three-color(#ddd 0%, #fff 70px, #fff 100%);
     background-repeat: no-repeat;
     > div {
+        display: table-cell;
         #topbar {
-            background-color: #49a5ce;
+            .animate-bg();
             border-bottom: 2px solid #fff;
-            .box-shadow(0 -3px 2px rgba(0, 0, 0, 0.1) inset);
-            height: 13px;
+            //.box-shadow(0 -3px 2px rgba(0, 0, 0, 0.1) inset);
+            height: 5px;
             width: 100%;
             position: absolute;
             top: 0;
             left: 0;
         }
         #content {
-            width: 720px;
-            margin: 30px auto;
-            display: table;
+            height: 485px;
+            margin: auto;
+            padding: 30px;
+            position: relative;
+            width: 800px;
             #text {
-                text-align: right;
-                display: table-cell;
-                vertical-align: middle;
+                left: 30px;
                 padding-right: 50px;
+                position: absolute;
+                text-align: left;
+                top: 30px;
+                vertical-align: middle;
+                width: 370px;
+                z-index: 1;
                 h1 {
-                    width: 145px;
-                    height: 57px;
-                    background-image: url(../imgs/logo.png);
+                    width: 127px;
+                    height: 47px;
+                    background-image: url(../imgs/logo2.png);
+                    .animate-bg();
                     display: inline-block;
                     background-size: contain;
                     margin: 0;
-                    background-color: #49a5ce;
                 }
                 p {
-                    font-size: 14px;
+                    font-size: 11px;
                     color: #999;
                     line-height: 18px;
-                }
-            }
-            #iphone {
-                display: table-cell;
-                width: 307px;
-                height: 600px;
-                background-image: url(../imgs/iphone.png);
-                #iphone-inside {
-                    position: relative;
-                    time {
-                        background-color: #000000;
-                        color: #CCCCCC;
-                        display: block;
-                        font-size: 10px;
-                        left: 120px;
-                        padding-top: 1px;
-                        pointer-events: none;
-                        position: absolute;
-                        text-align: center;
-                        text-transform: uppercase;
-                        top: 109px;
-                        width: 69px;
+                    strong {
+                        color: #000;
                     }
                 }
             }
+            #iphone {
+                .animate-bg();
+                bottom: 0;
+                position: absolute;
+                right: 0;
+            }
         }
-        display: table-cell;
         position: relative;
         vertical-align: middle;
+    }
+
+    footer {
+        bottom: 0;
+        color: #777777;
+        font-size: 12px;
+        left: 0;
+        padding: 12px;
+        position: absolute;
+        a, a:visited {
+            .animate-a();
+            text-decoration: none;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
     }
 }
