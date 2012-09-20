@@ -1,0 +1,15 @@
+{
+  "name": "gatherapp.co",
+  "subdomain": "gatherapp",
+  "domains": [
+    "gatherapp.co",
+    "www.gatherapp.co"
+  ],
+  "scripts": {
+    "start": "app.coffee"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.8.x"
+  }
+}
