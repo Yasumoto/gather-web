@@ -1,0 +1,466 @@
+@import 'lib';
+
+@g-yellow: #e2b735;
+@g-red: #c85b5c;
+@g-blue: #25a5d0;
+@g-purple: #a64ba5;
+@g-green: #8bbe48;
+@g-pink: #e47fb8;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(../imgs/p1-sky.png);
+    background-repeat: repeat-x;
+    background-color: #f2fafb;
+    header {
+        border-top: 10px solid rgba(159, 205, 211, 0.9);
+        padding: 70px 0 0;
+        background-image: url(../imgs/p1-icons.png);
+        background-repeat: repeat-x;
+        min-height: 500px;
+        background-position: top center;
+        background-attachment: fixed;
+        h1 {
+            font-size: 2.5em;
+            background-image: url(../imgs/p1-logo.png);
+            background-repeat: no-repeat;
+            background-position: top center;
+            padding-top: 200px;
+            text-align: center;
+            margin: 0 0 50px;
+            color: #222222;
+        }
+        p {
+            width: 650px;
+            margin: auto;
+            color: #689ba3;
+            line-height: 1.3em;
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 20px;
+            strong {
+                color: #4f8088;
+            }
+        }
+
+        &.on {
+            .icons {
+                opacity: 0;
+                .transition(all 1s ease-out 0s);
+            }
+            .speech div {
+                .transform(scale(1) translateY(0)) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        .icons {
+            background-image: url(../imgs/p1-colored.png);
+            background-repeat: no-repeat;
+            width: 400px;
+            height: 50px;
+            background-size: contain;
+            margin: 70px auto 0;
+            opacity: 1;
+            .transition(all 0.5s ease-out 0.7s);
+        }
+
+        .sidewalk {
+            height: 319px;
+            padding-top: 100px;
+            background-image: url(../imgs/p1-sidewalk.png);
+            background-position: center 170px;
+            background-repeat: repeat-x;
+            .kids {
+                background-image: url(../imgs/p1-kids.png);
+                width: 1082px;
+                height: 246px;
+                margin: auto;
+                position: relative;
+                .speech {
+                    left: 0;
+                    position: absolute;
+                    top: -160px;
+                    div {
+                        display: inline-block;
+                        background-image: url(../imgs/p1-speech.png);
+                        position: absolute;
+                        opacity: 0;
+                        .transform(scale(0.7) translateY(60px));
+                        background-repeat: no-repeat;
+                        &.s1 {
+                            width: 97px;
+                            height: 111px;
+                            left: 31px;
+                            top: 30px;
+                            .transition(all 0.5s ease-out 0.3s);
+                        }
+                        &.s2 {
+                            width: 107px;
+                            height: 117px;
+                            background-position: -97px 0;
+                            left: 161px;
+                            .transition(all 0.5s ease-out 0.15s);
+                        }
+                        &.s3 {
+                            width: 94px;
+                            height: 111px;
+                            background-position: -206px 0;
+                            left: 302px;
+                            top: 20px;
+                            .transition(all 0.5s ease-out 0.3s);
+                        }
+                        &.s4 {
+                            width: 103px;
+                            height: 117px;
+                            background-position: -302px 0;
+                            left: 420px;
+                            .transition(all 0.5s ease-out 0.45s);
+                        }
+                        &.s5 {
+                            width: 85px;
+                            height: 92px;
+                            background-position: -408px 0;
+                            left: 560px;
+                            top: 45px;
+                            .transition(all 0.5s ease-out 0.15s);
+                        }
+                        &.s6 {
+                            width: 99px;
+                            height: 108px;
+                            background-position: -495px 0;
+                            left: 675px;
+                            top: 15px;
+                            .transition(all 0.5s ease-out 0.45s);
+                        }
+                        &.s7 {
+                            width: 105px;
+                            height: 117px;
+                            background-position: -594px 0;
+                            left: 802px;
+                            top: 5px;
+                            .transition(all 0.5s ease-out 0s);
+                        }
+                        &.s8 {
+                            width: 99px;
+                            height: 111px;
+                            background-position: -700px 0;
+                            left: 952px;
+                            top: 30px;
+                            .transition(all 0.5s ease-out 0s);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #p2 {
+        background-image: url(../imgs/p2-bg2.png);
+        border-bottom: 12px solid #678120;
+        background-color: #829d34;
+        padding: 50px 0;
+        h2 {
+            border-bottom: 4px dotted #EEEEEE;
+            font-size: 1.8em;
+            margin: auto auto 30px;
+            padding-bottom: 10px;
+            text-align: center;
+            width: 604px;
+        }
+        .uses {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            width: 1000px;
+            margin: auto;
+            color: #fff;
+            padding: 0;
+            position: relative;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                line-height: 2.5em;
+                li {
+                    opacity: 0.7;
+                    padding-left: 20px;
+                    font-size: 1.3em;
+                    &.h, &.f {
+                        padding-left: 0;
+                        opacity: 1;
+                        font-size: 1.6em;
+                    }
+                    &.h {
+                        font-weight: bold;
+                    }
+                    &.f {
+                        border-top: 4px dotted #CCCCCC;
+                        font-size: 1.1em;
+                        margin-top: 20px;
+                        padding-top: 15px;
+                        width: 600px;
+                    }
+                }
+            }
+            #iphone {
+                width: 333px;
+                height: 651px;
+                background-image: url(../imgs/p2-iphone.png);
+                position: absolute;
+                top: 90px;
+                left: 50%;
+                margin-left: 130px;
+                &.i1 {
+                    .iphone-icons {
+                        background-position: 635px 0;
+                    }
+                    .iphone-inside {
+                        background-color: @g-blue;
+                    }
+                }
+                &.i2 {
+                    .iphone-icons {
+                        background-position: 23px 0;
+                    }
+                    .iphone-inside {
+                        background-color: @g-purple;
+                    }
+                }
+                &.i3 {
+                    .iphone-icons {
+                        background-position: -587px 0;
+                    }
+                    .iphone-inside {
+                        background-color: @g-red;
+                    }
+                }
+                .iphone-inside {
+                    background-image: url(../imgs/p2-iphone-inside.png);
+                    width: 282px;
+                    height: 422px;
+                    left: 27px;
+                    position: absolute;
+                    top: 116px;
+                    background-color: @g-red;
+                    .transition(background-color 3s ease-out);
+                }
+                .iphone-icons {
+                    background-image: url("../imgs/p3-iphone-icons.png");
+                    .transform(translateZ(0));
+                    .transition(background-position 3s ease-out);
+                    height: 37px;
+                    left: 0;
+                    position: absolute;
+                    top: 133px;
+                    width: 282px;
+                }
+                &.on {
+                    position: fixed;
+                    top: 60px;
+                }
+                &.bottom {
+                    bottom: -528px;
+                    position: absolute;
+                    top: auto;
+                }
+            }
+        }
+    }
+    #p3 {
+        background-image: url(../imgs/p3-theater.png), url(../imgs/p3-curtains.png);
+        background-position: top center;
+        background-repeat: no-repeat, repeat-x;
+        height: 780px;
+        background-color: #0f0708;
+    }
+    #p4 {
+        background-color: #0F0708;
+        .contain {
+            width: 1000px;
+            margin: auto;
+            position: relative;
+            height: 660px;
+            .people {
+                position: absolute;
+                top: -30px;
+                left: -55px;
+                background-color: #0F0708;
+                height: 516px;
+                width: 538px;
+                &.on {
+                    div {
+                        opacity: 1;
+                        &.p2 {
+                            .transition(all 1.5s ease-out 0s);
+                        }
+                        &.p3 {
+                            .transition(all 1.5s ease-out 0.5s);
+                        }
+                        &.p4 {
+                            .transition(all 1.5s ease-out 1s);
+                        }
+                        &.p5 {
+                            .transition(all 1.5s ease-out 1.5s);
+                        }
+                    }
+                }
+                div {
+                    position: absolute;
+                    height: 516px;
+                    width: 538px;
+                    top: 0;
+                    left: 0;
+                    background-image: url(../imgs/p4-people.png);
+                    opacity: 0;
+                    &.p1 {
+                        opacity: 1;
+                        background-position: 538px * 0;
+                    }
+                    &.p2 {
+                        .transition(all 1.5s ease-out 1.5s);
+                        background-position: 538px * -1;
+                    }
+                    &.p3 {
+                        .transition(all 1.5s ease-out 1s);
+                        background-position: 538px * -2;
+                    }
+                    &.p4 {
+                        .transition(all 1.5s ease-out 0.5s);
+                        background-position: 538px * -3;
+                    }
+                    &.p5 {
+                        .transition(all 1.5s ease-out 0s);
+                        background-position: 538px * -4;
+                    }
+                }
+            }
+            h2 {
+                span {
+                    color: #999;
+                }
+            }
+            .step1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                color: #fff;
+                width: 400px;
+                #face-in-view {
+                    position: absolute;
+                    top: 290px;
+                }
+                p {
+                    font-size: 0.9em;
+                    line-height: 1.3em;
+                }
+            }
+            .step2 {
+                position: absolute;
+                right: 0;
+                z-index: 10;
+                color: #fff;
+                width: 400px;
+                text-align: right;
+                h2 {
+                    margin-top: 5px;
+                }
+                p {
+                    font-size: 0.9em;
+                    line-height: 1.3em;
+                }
+                #credit-card {
+                    background-image: url(../imgs/p4-cc.png);
+                    width: 171px;
+                    height: 149px;
+                    display: inline-block;
+                }
+            }
+            .step3 {
+                color: #FFFFFF;
+                left: 50%;
+                margin-left: -200px;
+                position: absolute;
+                text-align: center;
+                top: 420px;
+                width: 400px;
+                z-index: 10;
+                h2 {
+                    margin-top: 5px;
+                }
+                p {
+                    font-size: 0.9em;
+                    line-height: 1.3em;
+                }
+                #compass {
+                    position: absolute;
+                    right: -260px;
+                    top: -9px;
+                    width: 168px;
+                    height: 203px;
+                    background-image: url(../imgs/p4-vision.png);
+                    #thingy {
+                        background-image: url(../imgs/p4-vision-thingy.png);
+                        width: 22px;
+                        height: 107px;
+                        .transition(none);
+                        .transform(rotate(40deg));
+                        left: 80px;
+                        position: absolute;
+                        top: 70px;
+                        &.on {
+                            .transform(rotate(400deg));
+                            .transition(all 1.75s ease-out 0s);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #p5 {
+        border-top: 12px solid #528a9c;
+        text-align: center;
+        background-color: #81bbce;
+        padding: 40px 0 80px;
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        background-image: url(../imgs/p5-bg.png);
+        h2 {
+            margin: 0 0 10px;
+            font-size: 3em;
+        }
+        p {
+            width: 650px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        .team {
+            width: 200px;
+            padding-top: 215px;
+            background-image: url(../imgs/p5-team.png);
+            background-repeat: no-repeat;
+            display: inline-block;
+            margin: 0 60px;
+            color: #fff;
+            text-decoration: none;
+            .transition(opacity 0.2s ease-out);
+            &:hover {
+                opacity: 0.8;
+            }
+            strong {
+                display: block;
+                font-size: 1.5em;
+            }
+        }
+        #team-dan{
+            background-position: -200px 0;
+        }
+        #team-joe{
+            background-position: -400px 0;
+        }
+    }
+}
+
+@media all and (max-width:500px) {
+}

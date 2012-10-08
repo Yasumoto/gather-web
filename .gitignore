@@ -1,4 +1,5 @@
 static/css/style.css
+static/css/yc.css
 
 lib-cov
 *.seed

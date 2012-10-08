@@ -34,6 +34,7 @@
   });
 
   app.get('/', index.index);
+  app.get('/yc', index.yc);
 
   http.createServer(app).listen(app.get('port'), function() {
     return console.log("Express server listening on port " + app.get('port'));

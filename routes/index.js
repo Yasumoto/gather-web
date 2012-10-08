@@ -11,4 +11,8 @@
     return res.render('index');
   };
 
+  exports.yc = function(req, res) {
+    return res.render('yc');
+  };
+
 }).call(this);
