@@ -9,6 +9,7 @@
 
 html, body {
     height: 100%;
+    min-width: 1215px;
 }
 
 body {
@@ -211,12 +212,46 @@ body {
                 top: 90px;
                 left: 50%;
                 margin-left: 130px;
+                #iphone-text {
+                    color: #BBB;
+                    font-size: 14px;
+                    position: relative;
+                    text-align: center;
+                    text-shadow: 1px 1px 0 #FFF;
+                    top: 202px;
+                    strong {
+                        font-weight: normal;
+                        color: #777;
+                    }
+                }
+                .iphone-icons-off {
+                    width: 112px;
+                    height: 33px;
+                    background-image: url(../imgs/p3-iphone-icons.png);
+                    opacity: 0;
+                    .transition(none);
+                    &.on {
+                        .transition(opacity 0.5s ease-out);
+                        opacity: 1;
+                    }
+                }
+                #iphone-icons-right {
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                }
                 &.i1 {
                     .iphone-icons {
                         background-position: 635px 0;
                     }
                     .iphone-inside {
                         background-color: @g-blue;
+                    }
+                    #iphone-icons-left.on {
+                        background-position: 71px -56px;
+                    }
+                    #iphone-icons-right.on {
+                        background-position: -99px -56px;
                     }
                 }
                 &.i2 {
@@ -226,6 +261,12 @@ body {
                     .iphone-inside {
                         background-color: @g-purple;
                     }
+                    #iphone-icons-left.on {
+                        background-position: 305px -56px;
+                    }
+                    #iphone-icons-right.on {
+                        background-position: 135px -56px;
+                    }
                 }
                 &.i3 {
                     .iphone-icons {
@@ -233,6 +274,54 @@ body {
                     }
                     .iphone-inside {
                         background-color: @g-red;
+                    }
+                    #iphone-icons-left.on {
+                        background-position: -23px -56px;
+                    }
+                    #iphone-icons-right.on {
+                        background-position: -193px -56px;
+                    }
+                }
+                &.i4 {
+                    .iphone-icons {
+                        background-position: 164px 0;
+                    }
+                    .iphone-inside {
+                        background-color: @g-pink;
+                    }
+                    #iphone-icons-left.on {
+                        background-position: 164px -56px;
+                    }
+                    #iphone-icons-right.on {
+                        background-position: -6px -56px;
+                    }
+                }
+                &.i5 {
+                    .iphone-icons {
+                        background-position: -729px 0;
+                    }
+                    .iphone-inside {
+                        background-color: @g-yellow;
+                    }
+                    #iphone-icons-left.on {
+                        background-position: 117px -56px;
+                    }
+                    #iphone-icons-right.on {
+                        background-position: -53px -56px;
+                    }
+                }
+                &.i6 {
+                    .iphone-icons {
+                        background-position: -72px 0;
+                    }
+                    .iphone-inside {
+                        background-color: @g-green;
+                    }
+                    #iphone-icons-left.on {
+                        background-position: 210px -56px;
+                    }
+                    #iphone-icons-right.on {
+                        background-position: 40px -56px;
                     }
                 }
                 .iphone-inside {
@@ -244,6 +333,16 @@ body {
                     top: 116px;
                     background-color: @g-red;
                     .transition(background-color 3s ease-out);
+                }
+                .iphone-inside2 {
+                    background-image: url(../imgs/p2-iphone-inside2.png);
+                    width: 282px;
+                    height: 422px;
+                    left: 27px;
+                    position: absolute;
+                    top: 116px;
+                    opacity: 0;
+                    z-index: 10;
                 }
                 .iphone-icons {
                     background-image: url("../imgs/p3-iphone-icons.png");
@@ -263,6 +362,9 @@ body {
                     bottom: -528px;
                     position: absolute;
                     top: auto;
+                    .iphone-inside2 {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -273,6 +375,58 @@ body {
         background-repeat: no-repeat, repeat-x;
         height: 780px;
         background-color: #0f0708;
+        .container {
+            width: 800px;
+            margin: auto;
+            position: relative;
+        }
+        p {
+            color: #EEEEEE;
+            line-height: 1.45em;
+            padding: 50px;
+            width: 400px;
+            opacity: 0;
+            margin: 0;
+        }
+        &.on p {
+            opacity: 1;
+            .transition(opacity 0.5s ease-out 0.5s);
+        }
+        .ticket {
+            width: 166px;
+            height: 88px;
+            background-image: url(../imgs/p3-ticket.png);
+            position: absolute;
+            left: 320px;
+            position: absolute;
+            top: 50px;
+        }
+        &.on #t1 {
+            left: -80px;
+            top: 380px;
+            .transform(none);
+            .transition(all 1s ease-out 0.4s);
+            .transform(rotate(0deg));
+        }
+        &.on #t2 {
+            left: 122px;
+            top: 380px;
+            .transform(none);
+            .transition(all 1s ease-out 0.2s);
+            .transform(rotate(3deg));
+        }
+        &.on #t3 {
+            left: 325px;
+            top: 380px;
+            .transform(rotate(-5deg));
+            .transition(all 1s ease-out 0s);
+        }
+        #t2 {
+            .transform(rotate(-10deg) translate(0px, 10px));
+        }
+        #t1 {
+            .transform(rotate(-20deg) translate(0px, 20px));
+        }
     }
     #p4 {
         background-color: #0F0708;
