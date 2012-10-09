@@ -370,6 +370,7 @@ body {
         }
     }
     #p3 {
+        font-size: 13px;
         background-image: url(../imgs/p3-theater.png), url(../imgs/p3-curtains.png);
         background-position: top center;
         background-repeat: no-repeat, repeat-x;
@@ -383,7 +384,10 @@ body {
         p {
             color: #EEEEEE;
             line-height: 1.45em;
-            padding: 50px;
+            &:first-child {
+                padding: 50px 0 20px 50px;
+            }
+            padding: 0 0 20px 50px;
             width: 400px;
             opacity: 0;
             margin: 0;
@@ -500,7 +504,7 @@ body {
                 left: 0;
                 z-index: 10;
                 color: #fff;
-                width: 400px;
+                width: 430px;
                 #face-in-view {
                     position: absolute;
                     top: 290px;
@@ -515,7 +519,7 @@ body {
                 right: 0;
                 z-index: 10;
                 color: #fff;
-                width: 400px;
+                width: 430px;
                 text-align: right;
                 h2 {
                     margin-top: 5px;
@@ -538,7 +542,7 @@ body {
                 position: absolute;
                 text-align: center;
                 top: 420px;
-                width: 400px;
+                width: 430px;
                 z-index: 10;
                 h2 {
                     margin-top: 5px;
@@ -585,7 +589,7 @@ body {
             font-size: 3em;
         }
         p {
-            width: 650px;
+            width: 580px;
             margin: auto;
             margin-bottom: 40px;
         }
