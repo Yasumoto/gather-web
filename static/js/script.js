@@ -56,4 +56,9 @@ $(function() {
         $pi_off.addClass('on');
         $text.text(types[i]);
     });
+
+    $('#more').click(function(e){
+        e.preventDefault();
+        $('html, body').animate({'scrollTop': 1000}, 2500);
+    });
 });
